@@ -72,6 +72,56 @@ const createAdviceApp = () => {
     "Life is too short to be anything but happy.",
     "Success usually comes to those who are too busy to be looking for it.",
     "Don’t stop until you’re proud.",
+    "Embrace each day with gratitude.",
+    "Focus on progress, not perfection.",
+    "Trust that you’re exactly where you’re meant to be.",
+    "Your mindset shapes your reality—think positively.",
+    "Celebrate small victories, they lead to big accomplishments.",
+    "Be kind to yourself; growth takes time.",
+    "Surround yourself with people who lift you up.",
+    "You have the power to create your own happiness.",
+    "Every day is a new chance to improve.",
+    "Mistakes are simply stepping stones to success.",
+    "Believe in the power of yet: you may not be there yet.",
+    "The best time to start is now.",
+    "Your value isn’t measured by the opinions of others.",
+    "Take breaks, but never quit on yourself.",
+    "Do something each day that brings you joy.",
+    "Focus on solutions, not problems.",
+    "Comparison is the thief of joy; your journey is unique.",
+    "Patience and consistency yield the greatest rewards.",
+    "Choose to see the good in every situation.",
+    "Embrace change—it’s part of growth.",
+    "Don’t let yesterday take up too much of today.",
+    "Your dreams are valid; work towards them.",
+    "Let go of what you can’t control, focus on what you can.",
+    "Speak kindly to yourself—your inner voice matters.",
+    "Remember that small steps lead to big changes.",
+    "Success is a series of small, consistent efforts.",
+    "Be the energy you want to attract.",
+    "Find joy in the journey, not just the destination.",
+    "Stay curious and keep learning.",
+    "Your worth is not tied to your productivity.",
+    "Trust the timing of your life.",
+    "Believe in yourself, even if others don't.",
+    "The only limit to your impact is your imagination.",
+    "You’re stronger than you think.",
+    "Give yourself permission to rest when needed.",
+    "Good things come to those who stay patient and persistent.",
+    "You are your best investment—take care of yourself.",
+    "Success is not measured by money but by happiness.",
+    "Be mindful; each moment is an opportunity.",
+    "Live with intention and purpose.",
+    "Be gentle with yourself during difficult times.",
+    "Choose kindness, always.",
+    "You’re capable of achieving amazing things.",
+    "Be proud of how far you’ve come.",
+    "Your journey is unique, don’t compare it to others.",
+    "Self-care is not selfish; it’s essential.",
+    "Your hard work will pay off in ways you can't yet see.",
+    "You are worthy of all the good things in life.",
+    "Take time to appreciate the little things.",
+    "Stay hopeful; each day brings new opportunities.",
     "Happiness is not by chance, but by choice.",
     "Only I can change my life. No one can do it for me.",
     "Life isn’t about waiting for the storm to pass. It’s about learning to dance in the rain.",
@@ -93,7 +143,6 @@ const createAdviceApp = () => {
     "You are never too old to set another goal or to dream a new dream.",
     "Perseverance is not a long race; it is many short races one after another."
   ];
-
   // Create container and elements
   const adviceContainer = document.createElement("div");
   const title = document.createElement("h1");
@@ -109,105 +158,127 @@ const createAdviceApp = () => {
 
   styleSheet.textContent = `
     @keyframes float {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
-        100% { transform: translateY(0px); }
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
     }
     
     @keyframes glow {
-        from { text-shadow: 0 0 3px #fff, 0 0 5px #00ff88; }
-        to { text-shadow: 0 0 5px #fff, 0 0 10px #00ff88; }
+      from { text-shadow: 0 0 3px #fff, 0 0 5px #00ff88; }
+      to { text-shadow: 0 0 5px #fff, 0 0 10px #00ff88; }
     }
 
     @keyframes gradientBG {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1a1a2e);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .advice-container {
+      max-width: 700px;
+      width: 90%;
+      margin: 20px;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+      transform: translateY(0);
+      transition: transform 0.3s ease;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+      animation: glow 2s ease-in-out infinite alternate;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: #fff;
+      margin: 30px 0;
+      padding: 30px;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.1);
+      border-left: 4px solid #00ff88;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      transition: all 0.5s ease;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background: linear-gradient(45deg, #00ff88, #00b4d8);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #fff;
+      text-align: center;
+    }
+
+    footer a {
+      color: #00ff88;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+    .advice-container {
+        padding: 20px;
+      }
+        html{
+        font-size: 12px;
+        }
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 12px 24px;
+      }
     }
   `;
 
-  document.body.style.cssText = `
-    margin: 0;
-    min-height: 100vh;
-    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1a1a2e);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    flex-direction: column;
-  `;
-
-  adviceContainer.style.cssText = `
-    max-width: 700px;
-    width: 90%;
-    margin: 20px;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    text-align: center;
-    transform: translateY(0);
-    transition: transform 0.3s ease;
-    animation: float 6s ease-in-out infinite;
-  `;
-
-  title.style.cssText = `
-    color: #fff;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    animation: glow 2s ease-in-out infinite alternate;
-    letter-spacing: 2px;
-  `;
-
-  adviceText.style.cssText = `
-    font-size: 1.4rem;
-    line-height: 1.8;
-    color: #fff;
-    margin: 30px 0;
-    padding: 30px;
-    border-radius: 15px;
-    background: rgba(255,255,255,0.1);
-    border-left: 4px solid #00ff88;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    transition: all 0.5s ease;
-  `;
-
-  getAdviceButton.style.cssText = `
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    background: linear-gradient(45deg, #00ff88, #00b4d8);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    position: relative;
-    overflow: hidden;
-  `;
-
-  footer.style.cssText = `
-    margin-top: 20px;
-    font-size: 1rem;
-    color: #fff;
-    text-align: center;
-  `;
-
-  footer.querySelector("a").style.cssText = `
-    color: #00ff88;
-    text-decoration: none;
-    font-weight: bold;
-  `;
-
-  // Button interactions with ripple effect (unchanged)
+  // Button interactions
   getAdviceButton.onmouseover = () => {
     getAdviceButton.style.transform = "translateY(-5px) scale(1.05)";
     getAdviceButton.style.boxShadow = "0 10px 20px rgba(0,0,0,0.3)";
@@ -239,7 +310,8 @@ const createAdviceApp = () => {
     }, 1000);
   });
 
-  // Build DOM structure efficiently
+  // Build DOM structure
+  adviceContainer.classList.add("advice-container");
   adviceContainer.append(title, adviceText, getAdviceButton);
   document.head.appendChild(styleSheet);
   document.body.appendChild(adviceContainer);
