@@ -244,16 +244,50 @@ const createAdviceApp = () => {
     }
 
     footer {
-      margin-top: 20px;
-      font-size: 1rem;
-      color: #fff;
+      margin-top: 30px;
+      padding: 15px;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
       text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    footer:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
     }
 
     footer a {
       color: #00ff88;
       text-decoration: none;
       font-weight: bold;
+      position: relative;
+      padding: 2px 4px;
+      transition: all 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #fff;
+      text-shadow: 0 0 8px #00ff88;
+    }
+
+    footer a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: #00ff88;
+      transition: width 0.3s ease;
+    }
+
+    footer a:hover::after {
+      width: 100%;
     }
 
     @media (max-width: 600px) {
